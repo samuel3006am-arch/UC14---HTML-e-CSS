@@ -38,7 +38,8 @@ Eligendi tenetur eos nobis incidunt fugit excepturi ad placeat maiores culpa ver
 15
 16
 
-<img src-" ativ geekie. jpg " alt-" https://www.google.com/imgres?g=minecraftak&imgurl-https%3A%2F%2Fimages2.alphacoders.
+<img src-" ![minecraft-10-mil](https://github.com/user-attachments/assets/5b54b655-ba6c-41e4-8271-d4569b32c2f3)
+" alt-" https://www.google.com/imgres?g=minecraftak&imgurl-https%3A%2F%2Fimages2.alphacoders.
 com%,2F137%2Fthumb-1920-1370592.jpeg&imgrefurl-https%3A%2F%2Fwall.alphacoders.com%2Fbig.php%3Fi%3D1370592&docid=rIrndvL4PJuEnM8
 GbCICVJZM&vet=12ahUKEwjg5sDQhcGTAxVØF7kGHQ0-Ir0QnPAOegQILhAB..i&w=1920&h=1080&hcb=2&
 tbnid-GnØU
