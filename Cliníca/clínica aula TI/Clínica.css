@@ -1,0 +1,60 @@
+body {
+     background-color: rgb(153, 191, 224)
+     text-align: center;
+     font-family: Arial, sans-serif;
+     margin-top: 20px ; margin-bottom: 20px ;
+
+}
+
+#hospitaldoviver {
+font-size: 60px;
+}
+
+.bemvindo {
+     
+     font-size: 30px;
+}
+
+.cirurgias {
+     font-size: 30px;
+}
+.exames    {
+ font-size: 30px;    
+}
+
+.socorro {
+     font-size: 30px;
+}
+
+.dr.silva {
+     font-size: 50px;
+}
+
+.dr.souza {
+     font-size: 50px;
+}
+
+.dr.oliveira {
+     font-size: 50px;
+}
+
+
+h2 {
+     
+     font-size: 30px;
+}
+
+.depoimento1 {
+     font-size: 30px;
+     
+}
+
+.depoimento2 {
+     font-size: 30px;
+     
+}
+
+p {
+     
+     font-size: 30px;
+}
