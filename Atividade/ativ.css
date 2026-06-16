@@ -1,0 +1,58 @@
+/* 1. Aplicação da animação no elemento do botão */
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #c8ddff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative; /* Essencial para o movimento com a propriedade 'left' */
+    
+    /* Configuração da animação: nome, duração de 4 segundos e repetição infinita */
+    animation: pulsar 4s ease-in-out infinite;
+}
+
+body{
+    /* Estilos básicos para o corpo da página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura total da viewport para centralizar verticalmente */
+    background-color: #c4f2f4; /* Cor de fundo suave para destacar o botão */
+
+}
+.botao-animado {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #c8ddff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative; /* Essencial para o movimento com a propriedade 'left' */
+    
+    /* Configuração da animação: nome, duração de 4 segundos e repetição infinita */
+    animation: moverECor 4s ease-in-out infinite;
+}
+
+/* 2. Configuração dos @keyframes para alterar posição e cor ao longo do tempo */
+@keyframes pulsar{
+    0% {
+        left: 0px;              
+        background-color: #3498db;  
+    }
+    50% {
+        left: 200px;               
+        background-color: #e3b2ad; 
+    }
+    100% {
+        left: 0px;                 
+        background-color: #6d3368;
+    }
+}
+.container-botao {
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+}
