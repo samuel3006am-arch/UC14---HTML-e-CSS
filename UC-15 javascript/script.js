@@ -2,14 +2,23 @@ console.log("Olá,mundo!")
 
 confirm("Você deseja continuar?")
 prompt("Qual o seu nome?")
-alert("Boas vindas")
-console.log("A cidade do usuário é natal")
 
-let numero = prompt("Qual o numero")
-console.log("numero" + 67)
+let email = prompt("Digite seu E-mail")
+let cargo = prompt("Qual o seu cargo")
+let Empresa = prompt("Empresa")
 
-if (numero !== "7") {
-    alert("parabens")
+
+
+
+
+let numero = prompt("Digite sua senha")
+console.log("numero" + 36)
+
+if (senha !== "7") {
+    alert("Boas vindas")
 } else {
-    alert("reprovado")
+    alert("incorreto")
 }
+
+alert("O cartão de visitadas foi gerado com sucesso")
+
