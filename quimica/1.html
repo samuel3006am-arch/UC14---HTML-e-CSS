@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tabela Periódica dos Elementos</title>
+
+    <link rel="stylesheet" href="1.css">
+</head>
+
+<body>
+
+    <header class="topo">
+        <h1>TABELA PERIÓDICA DOS ELEMENTOS</h1>
+        <p>118 elementos químicos • 18 grupos • 7 períodos</p>
+    </header>
+
+
+    <!-- ==============================
+         LEGENDA
+    =============================== -->
+
+    <section class="legenda">
+
+        <div><span class="cor alcalino"></span> Metais alcalinos</div>
+        <div><span class="cor alcalino-terroso"></span> Alcalino-terrosos</div>
+        <div><span class="cor transicao"></span> Metais de transição</div>
+        <div><span class="cor pos-metal"></span> Pós-metais</div>
+        <div><span class="cor metaloide"></span> Metaloides</div>
+        <div><span class="cor nao-metal"></span> Outros não metais</div>
+        <div><span class="cor halogenio"></span> Halogênios</div>
+        <div><span class="cor lantanideo"></span> Lantanídeos</div>
+        <div><span class="cor actinideo"></span> Actinídeos</div>
+        <div><span class="cor gas-nobre"></span> Gases nobres</div>
+
+    </section>
+
+
+    <!-- ==============================
+         TABELA
+    =============================== -->
+
+    <main class="tabela-container">
+
+        <div class="tabela">
+
+            <!-- NÚMEROS DOS GRUPOS -->
+
+            <div class="grupos">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>10</span>
+                <span>11</span>
+                <span>12</span>
+                <span>13</span>
+                <span>14</span>
+                <span>15</span>
+                <span>16</span>
+                <span>17</span>
+                <span>18</span>
+            </div>
+
+
+            <!-- PERÍODOS -->
+
+            <div class="periodos">
+
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>7</span>
+
+            </div>
+
+
+            <!--
+                Os 118 elementos são inseridos pelo JavaScript.
+                A posição é calculada de acordo com:
+                grupo + período.
+            -->
+
+            <div id="tabelaPrincipal" class="tabela-principal"></div>
+
+        </div>
+
+
+        <!-- ==============================
+             LANTANÍDEOS
+        =============================== -->
+
+        <section class="serie">
+
+            <div class="serie-titulo">
+                <strong>Lantanídeos</strong>
+            </div>
+
+            <div id="lantanideos" class="serie-elementos"></div>
+
+        </section>
+
+
+        <!-- ==============================
+             ACTINÍDEOS
+        =============================== -->
+
+        <section class="serie">
+
+            <div class="serie-titulo">
+                <strong>Actinídeos</strong>
+            </div>
+
+            <div id="actinideos" class="serie-elementos"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         MODAL
+    =============================== -->
+
+    <div id="modal" class="modal">
+
+        <div class="modal-conteudo">
+
+            <button id="fechar" class="fechar">&times;</button>
+
+            <div id="modalElemento" class="modal-elemento"></div>
+
+            <h2 id="modalNome"></h2>
+
+            <div class="dados">
+
+                <p>
+                    <strong>Número atômico:</strong>
+                    <span id="modalNumero"></span>
+                </p>
+
+                <p>
+                    <strong>Símbolo:</strong>
+                    <span id="modalSimbolo"></span>
+                </p>
+
+                <p>
+                    <strong>Grupo:</strong>
+                    <span id="modalGrupo"></span>
+                </p>
+
+                <p>
+                    <strong>Período:</strong>
+                    <span id="modalPeriodo"></span>
+                </p>
+
+                <p>
+                    <strong>Família:</strong>
+                    <span id="modalFamilia"></span>
+                </p>
+
+                <p>
+                    <strong>Estado físico:</strong>
+                    <span id="modalEstado"></span>
+                </p>
+
+            </div>
+
+
+            <div class="descricao">
+
+                <h3>Características</h3>
+
+                <p id="modalDescricao"></p>
+
+            </div>
+
+
+            <div class="controles">
+
+                <button id="falar">
+                    🔊 Ouvir informações
+                </button>
+
+                <button id="parar">
+                    ⏹ Parar voz
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            Tabela Periódica Interativa • 118 elementos
+        </p>
+
+    </footer>
+
+
+    <script src="1.js"></script>
+
+</body>
+
+</html>
