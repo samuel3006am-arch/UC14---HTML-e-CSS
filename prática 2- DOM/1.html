@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel de Viagem</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1 id="titulo">Painel de Viagem ✈️</h1>
+
+        <label for="cidade">Digite uma cidade:</label>
+
+        <input 
+            type="text" 
+            id="cidade" 
+            placeholder="Ex: Natal"
+        >
+
+        <button id="btnCidade" onclick="mostrarCidade()">
+            Exibir mensagem
+        </button>
+
+        <p id="mensagem"></p>
+
+        <button id="btnDestacar" onclick="destacarMensagem()">
+            Destacar mensagem
+        </button>
+
+        <hr>
+
+        <h2>Contador</h2>
+
+        <div class="contador">
+
+            <button id="btnMenos" onclick="diminuir()">
+                -
+            </button>
+
+            <span id="contador">10</span>
+
+            <button id="btnMais" onclick="aumentar()">
+                +
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="1.js"></script>
+
+</body>
+</html>
