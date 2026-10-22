@@ -1,0 +1,523 @@
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ink: #242424;
+  --blue: #2d5d98;
+  --sky: #a1c5d4;
+  --paper: #ffffff;
+
+  --font-body: "DM Sans", Arial, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--ink);
+  background: var(--paper);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+/* APRESENTAÇÃO PRINCIPAL */
+.hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(
+    to bottom,
+    #c8c8c8 0%,
+    #a6a6a6 59.5%,
+    #ffffff 59.5%,
+    #ffffff 100%
+  );
+}
+
+.hero-inner {
+  width: min(100% - 12vw, 1100px);
+  margin-inline: auto;
+  padding: clamp(60px, 10vw, 130px) 0 70px;
+  position: relative;
+}
+
+.eyebrow {
+  color: #555;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 10.4vw, 8.5rem);
+  font-weight: 800;
+  letter-spacing: -0.075em;
+  line-height: 0.98;
+}
+
+h1 span,
+.contact h2 span {
+  color: var(--blue);
+}
+
+/* LINHA E ANO */
+.year-line {
+  width: 100%;
+  height: 2px;
+  background: var(--sky);
+  margin-top: clamp(65px, 11vw, 145px);
+}
+
+.years {
+  margin-top: 12px;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+/* ILUSTRAÇÃO COM LINHAS AZUIS */
+.artwork {
+  height: clamp(390px, 57vw, 650px);
+  position: relative;
+  margin-top: 20px;
+  isolation: isolate;
+}
+
+.contour-lines {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+
+  width: min(83%, 730px);
+  height: 100%;
+
+  stroke: var(--blue);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.blue-block {
+  position: absolute;
+  z-index: -2;
+
+  background: var(--sky);
+  width: 34%;
+  height: 70%;
+
+  right: -7.5%;
+  bottom: -20%;
+}
+
+/* FOTOGRAFIA */
+.portrait {
+  position: absolute;
+
+  width: clamp(230px, 48%, 490px);
+  aspect-ratio: 1 / 1.03;
+
+  top: 18%;
+  right: 1%;
+
+  background: #ffffff;
+  border: 10px solid #ffffff;
+  box-shadow: 0 3px 18px rgb(0 0 0 / 5%);
+  overflow: hidden;
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-placeholder {
+  display: none;
+  place-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  color: #526a7d;
+  text-align: center;
+  letter-spacing: 0.18em;
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  background: linear-gradient(
+    160deg,
+    #dce7f1,
+    #8eabc9 58%,
+    #345578
+  );
+}
+
+/* TEXTO DE APRESENTAÇÃO */
+.intro {
+  max-width: 760px;
+  font-family: Georgia, serif;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  margin-top: 28px;
+}
+
+.signature-row {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+
+  margin-top: clamp(65px, 10vw, 120px);
+}
+
+.signature {
+  font-size: clamp(1.25rem, 2.5vw, 1.8rem);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+
+.scroll-link,
+.contact-link {
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.scroll-link span {
+  color: var(--blue);
+  font-size: 1.1rem;
+}
+
+.side-rule {
+  position: absolute;
+  top: 0;
+  right: 5.5%;
+
+  width: 1px;
+  height: 95%;
+
+  background: #202020;
+}
+
+/* SEÇÕES */
+.section {
+  padding: clamp(75px, 12vw, 150px)
+    max(6vw, calc((100% - 1100px) / 2));
+}
+
+.section-label {
+  color: var(--blue);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: clamp(2.7rem, 7vw, 6rem);
+  line-height: 1.02;
+  letter-spacing: -0.07em;
+}
+
+.section h2 em {
+  color: var(--blue);
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+.section-copy {
+  max-width: 680px;
+  margin-top: 30px;
+
+  color: #555;
+  font-size: 1.05rem;
+}
+
+/* INFORMAÇÕES PESSOAIS */
+.personal-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+
+  max-width: 700px;
+  margin-top: 42px;
+}
+
+.personal-details div {
+  border-top: 1px solid #c8d9e3;
+  padding-top: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.detail-label {
+  color: var(--blue);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+}
+
+.personal-details strong {
+  font-size: 1rem;
+}
+
+/* HABILIDADES */
+.skills,
+.projects {
+  background: #f3f3f1;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+
+  margin-top: 50px;
+}
+
+.skill-card {
+  padding: 26px;
+  min-height: 220px;
+
+  border: 1px solid #d5d5d2;
+  background: #ffffff;
+}
+
+.skill-card > span,
+.project-number {
+  color: var(--blue);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.skill-card h3 {
+  margin-top: 28px;
+  font-size: 1.25rem;
+}
+
+.skill-card p {
+  margin-top: 8px;
+  color: #626262;
+  font-size: 0.92rem;
+}
+
+/* PROJETOS */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+
+  margin-top: 45px;
+}
+
+.project-card {
+  min-height: 250px;
+  padding: 26px;
+
+  border: 1px solid #d5d5d2;
+  background: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgb(0 0 0 / 6%);
+}
+
+.project-card h3 {
+  margin-top: 28px;
+  font-size: 1.25rem;
+}
+
+.project-card p {
+  margin-top: 8px;
+  color: #626262;
+  font-size: 0.92rem;
+}
+
+.project-tag {
+  margin-top: auto;
+  padding-top: 25px;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--blue);
+}
+
+/* CONTATO */
+.contact {
+  background: #ffffff;
+}
+
+.contact > p:not(.section-label) {
+  color: #5c5c5c;
+  margin-top: 22px;
+}
+
+.contact-link {
+  display: inline-block;
+  margin-top: 30px;
+  padding-bottom: 7px;
+
+  border-bottom: 1px solid var(--blue);
+}
+
+/* RODAPÉ */
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 25px max(6vw, calc((100% - 1100px) / 2));
+
+  border-top: 1px solid #e2e2e2;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* ANIMAÇÕES DOS CARTÕES */
+.reveal-pending {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.reveal-pending.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 700px) {
+  .hero-inner {
+    width: calc(100% - 12vw);
+    padding-top: 65px;
+  }
+
+  .hero {
+    background: linear-gradient(
+      to bottom,
+      #c8c8c8 0%,
+      #a6a6a6 47%,
+      #ffffff 47%,
+      #ffffff 100%
+    );
+  }
+
+  .year-line {
+    margin-top: 65px;
+  }
+
+  .artwork {
+    height: 390px;
+    margin-top: 15px;
+  }
+
+  .contour-lines {
+    width: 100%;
+  }
+
+  .portrait {
+    width: 62%;
+    top: 23%;
+    right: 0;
+    border-width: 7px;
+  }
+
+  .blue-block {
+    right: -7vw;
+    bottom: -9%;
+    height: 48%;
+    width: 43%;
+  }
+
+  .intro {
+    margin-top: 24px;
+  }
+
+  .signature-row {
+    margin-top: 65px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .side-rule {
+    right: 3%;
+  }
+
+  .skill-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-card {
+    min-height: 190px;
+  }
+
+  .project-card {
+    min-height: 220px;
+  }
+
+  .personal-details {
+    gap: 18px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
+
+/* RESPEITA PREFERÊNCIAS DE ACESSIBILIDADE */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal-pending,
+  .reveal-pending.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
